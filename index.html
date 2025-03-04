@@ -9,12 +9,21 @@
     <!-- <script src="js/srcipt.js"></script> -->
     
 </head>
-<body class="h-screen w-full flex items-center justify-center p-[10px]">
+<style>
+    .loop{
+        animation: loop 2s linear infinite;
+    }
+    @keyframes loop{
+        
+    }
+</style>
+<body class="h-screen bg-green-100 w-full flex items-center justify-center">
     <button id="click" class="hover:text-green-400 rounded-tl-[50px] rounded-br-[50px]  bg-purple-500 py-2 cursor-pointer transition duration-300 px-[20px] font-serif text-5">Luv u</button>
-        <div id="alert" class=" flex flex-col m-10 transition duration-500 absolute top-0 w-[350px] flex items-center justify-between p-5 leading-normal text-green-600 bg-green-100 rounded-lg">
+
+        <div id="alert" class=" flex-col m-10 transition duration-500 absolute top-0 w-[350px] flex items-center justify-between p-5 leading-normal text-green-600 bg-white rounded-lg">
             <!-- Clock alert -->
             <div id="close" class="absolute right-[20px] text-[25px] hover:cursor-pointer hover:text-black transition duration-500 rounded-full top-0">&times;</div>
-            <img src="assets/images/due.png" class="h-20" alt="">
+            <img src="assets/images/haha.gif"  class="h-20 loop" alt="gif">
             <p class="text-black font-mono text-30">Pack u ah kbee🖕</p>
             <small class="text-purple-500 font-serif">Lavender</small>
     </div>
@@ -23,13 +32,14 @@
         const Click = document.querySelector('#click'); // Button element
         const Close = document.querySelector('#close'); // Alert div
         const Alert = document.querySelector('#alert'); // Alert div
-        Alert.style.visibility ='hidden';
+        Alert.style.opacity ='0';
         Click.addEventListener('click', function() {
-            Alert.style.visibility = 'visible'; // Show the alert
+            Alert.style.opacity = '1'; // Show the alert
         });
         Close.addEventListener('click', function(){
-            Alert.style.visibility = 'hidden'; // Hide the alert
+            Alert.style.opacity = '0'; // Hide the alert
         })
+        
     </script>
 </body>
 </html>
